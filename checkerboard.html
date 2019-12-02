@@ -1,0 +1,32 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <body onload="draw()">
+      <canvas id="sketch" width="600" height="600">
+      </canvas>
+
+      <script>
+       function draw(){
+         var sketch = document.getElementById('sketch');
+         var context = sketch.getContext("2d");
+         //black border thin
+         //1st square defined by loops below is 50x50 total 50+50=1300
+
+         context.fillStyle = "#000000"
+         context.fillRect(40, 30, 404, 404);
+
+
+       }
+
+
+
+
+
+
+
+</script>
+  </body>
+</html>
