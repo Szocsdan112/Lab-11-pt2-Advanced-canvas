@@ -1,0 +1,46 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <body onload="draw()">
+      <canvas id="sketch" width="300" height="300">
+      </canvas>
+
+      <script>
+       function draw(){
+         var sketch = document.getElementById('sketch');
+         var context = sketch.getContext("2d");
+
+      //making a red outer circle
+      context.fillStyle = "#801336"
+      context.beginPath();
+			context.arc(150, 150, 100, 0, 2 * Math.PI, true);
+			// context.arc(x, y, radius, start angle, end angle, clockwise);
+      context.closePath();
+      context.fill();
+
+      //making a blue middle circle
+      context.fillStyle = "#2E279d"
+      context.beginPath();
+      context.arc(150, 150, 75, 0, 2 * Math.PI, true);
+      // context.arc(x, y, radius, start angle, end angle, clockwise);
+      context.closePath();
+      context.fill();
+
+      //making a green smaller circle
+      context.fillStyle = "#004445"
+      context.beginPath();
+      context.arc(150, 150, 50, 0, 2 * Math.PI, true);
+      // context.arc(x, y, radius, start angle, end angle, clockwise);
+      context.closePath();
+      context.fill();
+    }
+
+
+
+
+    </script>
+  </body>
+</html>

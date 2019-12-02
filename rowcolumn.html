@@ -1,0 +1,36 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <body onload="draw()">
+      <canvas id="sketch" width="300" height="300">
+      </canvas>
+
+      <script>
+       function draw() {
+         var sketch = document.getElementById('sketch');
+         var context = sketch.getContext("2d");
+         //making a row of 5 circles
+         for( var i = 0; i < 5; i++){
+           drawCircle((30 * i + 10), 10, 10, "#5FE1EF")
+
+           function drawCircle(centerX, centerY, radius, drawcolor){
+
+             context.fillStyle = "#5FE1EF"
+             context.beginPath();
+             context.arc(centerX, centerY, radius, 0, Math.PI * 2, true);
+             context.closePath();
+             context.fill();
+           }
+
+          }
+    }
+
+
+
+
+    </script>
+  </body>
+</html>

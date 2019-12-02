@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="1300" height="1300">
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+			context.fillStyle = "#06BDFF"; // light blue
+			var rowstring = prompt("How many circles in a row do you want?");
+			var colnum = parseInt(rowstring);
+				// use a loop to make a row of circles
+			for (i = 1; i <= colnum; i++) {
+				context.beginPath();
+				context.arc(40, (i * 50), 20, 0, 2 * Math.PI, true);
+					// context.arc(x, y, radius, start angle, end angle, clockwise);
+				context.closePath();
+				context.fill();
+			}
+		}
+	</script>
+
+</body>
+</html>
